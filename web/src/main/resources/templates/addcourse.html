@@ -8,31 +8,31 @@
 </head>
 <body>
     <header class="header dark-grey">
-        <a class="default-32-text medium-grey-text" href="/registration">Главная</a>
-        <a class="default-32-text medium-grey-text" href="/authorization">Просмотр курсов</a>
-        <a class="default-32-text medium-grey-text" href="/authorization">Избранное</a>
-        <a class="default-32-text active-text" href="/authorization">Добавление курса</a>
-        <a class="default-32-text medium-grey-text" href="/authorization">Корзина</a>
+        <a class="default-32-text medium-grey-text" href="/main">Главная</a>
+        <a class="default-32-text medium-grey-text" href="/courses">Просмотр курсов</a>
+        <a class="default-32-text medium-grey-text" href="/users/favorite">Избранное</a>
+        <a class="default-32-text active-text" href="/users/add">Добавление курса</a>
+        <a class="default-32-text medium-grey-text" href="/users/cart">Корзина</a>
     </header>
     <main>
-        <form action="" class="flex-column flex-center">
+        <form enctype="multipart/form-data" th:action="@{/courses}" th:method="POST" th:object="${addPlaylist}" class="flex-column flex-center">
             <div class="flex-row gap-500">
                 <div class="flex-column flex-center">
                     <label class="default-32-text" for="name">Название</label>
-                    <input class="add-field default-24-text" type="text" name="" id="name">
+                    <input class="add-field default-24-text" type="text" th:field="*{name}" id="name">
                     <label class="default-32-text" for="category">Категория</label>
-                    <input class="add-field default-24-text" type="text" name="" id="category">
+                    <input class="add-field default-24-text" type="text" th:field="*{category.name}" id="category">
                     <label class="default-32-text" for="description">Описание</label>
-                    <input class="add-description default-24-text" type="text" name="" id="description">
+                    <input class="add-description default-24-text" type="text" th:field="*{description}" id="description">
                 </div>
                 <div class="flex-column flex-center">
                     <label class="default-32-text" for="photo">Фотография</label>
-                    <input type="file" accept="image/*" name="" id="photo" src="" onchange="loadFile(event)">
+                    <input type="file" th:field="*{file}" accept="image/*" id="photo" src="" onchange="loadFile(event)">
                     <div class="block-img">
                         <img id="output" width="100%" height="100%"/>
                     </div>
                     <label class="default-32-text" for="price">Цена</label>
-                    <input class="add-field" type="number" name="" id="price">
+                    <input class="add-field" type="number" th:field="*{price}" id="price">
                 </div>
             </div>
             <input type="submit" class="button-done default-32-text" value="Готово">

@@ -8,26 +8,26 @@
 </head>
 <body>
     <header class="header dark-grey">
-        <a class="default-32-text medium-grey-text" href="/registration">Главная</a>
-        <a class="default-32-text medium-grey-text" href="/authorization">Просмотр курсов</a>
-        <a class="default-32-text medium-grey-text" href="/authorization">Избранное</a>
-        <a class="default-32-text active-text" href="/authorization">Добавление курса</a>
-        <a class="default-32-text medium-grey-text" href="/authorization">Корзина</a>
+        <a class="default-32-text medium-grey-text" href="/main">Главная</a>
+        <a class="default-32-text medium-grey-text" href="/courses">Просмотр курсов</a>
+        <a class="default-32-text medium-grey-text" href="/users/favorite">Избранное</a>
+        <a class="default-32-text medium-grey-text" href="/users/add">Добавление курса</a>
+        <a class="default-32-text medium-grey-text" href="/users/cart">Корзина</a>
     </header>
     <main>
         <div class="flex-row flex-center gap-500">
             <div class="flex-column flex-center gap-25">
                 <div>
                     <div class="default-32-text">Название</div>
-                    <div class="default-32-text">*Название</div>
+                    <div class="default-32-text" th:utext="${courseById.name}"></div>
                 </div>
                 <div>
                     <div class="default-32-text">Категория</div>
-                    <div class="default-32-text">*Категория</div>
+                    <div class="default-32-text" th:utext="${courseById.category.name}"></div>
                 </div>
                 <div>
                     <div class="default-32-text">Описание</div>
-                    <div class="default-24-text">some</div>
+                    <div class="default-24-text" th:utext="${courseById.description}"></div>
                 </div>
                 <form action="">
                     <input class="button-add-to-favorites default-32-text" type="submit" value="Добавить в избранное">
@@ -35,11 +35,11 @@
             </div>
             <div class="flex-column flex-center">
                 <div class="block-img">
-                    <img src="" alt="" width="100%" height="100%">
+                    <img th:src="*{'data:image/jpeg;base64,' + courseById.photoString}" alt="" width="100%" height="100%">
                 </div>
                 <div>
                     <div class="default-32-text">Цена</div>
-                    <div class="default-32-text">200$</div>
+                    <div class="default-32-text" th:utext="${courseById.price}"></div>
                 </div>
                 <form action="">
                     <input class="button-add-to-favorites default-32-text" type="submit" value="Добавить в корзину">

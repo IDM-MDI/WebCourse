@@ -14,11 +14,11 @@ public class Rating {
     private Integer number;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "userEmail", nullable = false)
+    @JoinColumn(name = "user_email", nullable = false)
     private User userEmail;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "playlistId", nullable = false)
+    @JoinColumn(name = "playlist_id", nullable = false)
     private Playlist playlist;
 
     public Long getId() {

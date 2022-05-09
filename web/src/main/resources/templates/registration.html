@@ -12,10 +12,10 @@
         <a class="nav-button medium-grey default-32-text" href="/authorization">Авторизация</a>
     </header>
     <main>
-        <form class="block-reg fixed-center" action="">
+        <form class="block-reg fixed-center" th:action="@{/users}" th:method="POST" th:object="${registrUser}">
             <p class="main-text">Регистрация</p>
-            <input class="field-reg field-reg-text" type="email" placeholder="Введите email">
-            <input class="field-reg field-reg-text" type="password" placeholder="Введите пароль">
+            <input class="field-reg field-reg-text" th:field="*{email}" type="email" placeholder="Введите email">
+            <input class="field-reg field-reg-text" minlength="6" th:field="*{password}" type="password" placeholder="Введите пароль">
             <input class="button-reg default-32-text" type="submit" value="Регистрация">
         </form>
     </main>
