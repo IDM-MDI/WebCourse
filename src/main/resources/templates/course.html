@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Курс</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+</head>
+<body>
+    <header class="header dark-grey">
+        <a class="default-32-text medium-grey-text" href="/registration">Главная</a>
+        <a class="default-32-text medium-grey-text" href="/authorization">Просмотр курсов</a>
+        <a class="default-32-text medium-grey-text" href="/authorization">Избранное</a>
+        <a class="default-32-text active-text" href="/authorization">Добавление курса</a>
+        <a class="default-32-text medium-grey-text" href="/authorization">Корзина</a>
+    </header>
+    <main>
+        <div class="flex-row flex-center gap-500">
+            <div class="flex-column flex-center gap-25">
+                <div>
+                    <div class="default-32-text">Название</div>
+                    <div class="default-32-text">*Название</div>
+                </div>
+                <div>
+                    <div class="default-32-text">Категория</div>
+                    <div class="default-32-text">*Категория</div>
+                </div>
+                <div>
+                    <div class="default-32-text">Описание</div>
+                    <div class="default-24-text">some</div>
+                </div>
+                <form action="">
+                    <input class="button-add-to-favorites default-32-text" type="submit" value="Добавить в избранное">
+                </form>
+            </div>
+            <div class="flex-column flex-center">
+                <div class="block-img">
+                    <img src="" alt="" width="100%" height="100%">
+                </div>
+                <div>
+                    <div class="default-32-text">Цена</div>
+                    <div class="default-32-text">200$</div>
+                </div>
+                <form action="">
+                    <input class="button-add-to-favorites default-32-text" type="submit" value="Добавить в корзину">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer flex-row">
+        <p class="default-32-text active-text">Cправка и поддержка</p>
+        <p class="default-32-text active-text">+375 11 111 11 11</p>
+    </footer>
+</body>
+</html>

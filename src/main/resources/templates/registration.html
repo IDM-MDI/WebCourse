@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+</head>
+<body>
+    <header class="header dark-grey">
+        <a class="nav-button active default-32-text" href="/registration">Регистрация</a>
+        <a class="nav-button medium-grey default-32-text" href="/authorization">Авторизация</a>
+    </header>
+    <main>
+        <form class="block-reg fixed-center" action="">
+            <p class="main-text">Регистрация</p>
+            <input class="field-reg field-reg-text" type="email" placeholder="Введите email">
+            <input class="field-reg field-reg-text" type="password" placeholder="Введите пароль">
+            <input class="button-reg default-32-text" type="submit" value="Регистрация">
+        </form>
+    </main>
+</body>
+</html>

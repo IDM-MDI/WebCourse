@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+</head>
+<body>
+<header class="header dark-grey">
+    <a class="default-32-text active-text" href="/registration">Главная</a>
+    <a class="default-32-text medium-grey-text" href="/authorization">Просмотр курсов</a>
+    <a class="default-32-text medium-grey-text" href="/authorization">Избранное</a>
+    <a class="default-32-text medium-grey-text" href="/authorization">Добавление курса</a>
+    <a class="default-32-text medium-grey-text" href="/authorization">Корзина</a>
+</header>
+    <main class="flex-column flex-center">
+        <div>
+            <p class="main-page-text">Добро пожаловать в веб-приложение образовательных курсов!</p>
+        </div>
+        <div class="flex-row gap-100">
+            <div class="main-page-text-block">
+                <p class="default-32-text">Здесь вы можете просматривать курсы, добавленные другими пользователями,покупать , добавлять в избранное, а также создавать свои.</p>
+            </div>
+            <div>
+                <img src="img/img.png" width="518px" height="412px" alt="">
+            </div>
+        </div>
+    </main>
+  <footer class="footer flex-row">
+        <p class="default-32-text active-text">Cправка и поддержка</p>
+        <p class="default-32-text active-text">+375 11 111 11 11</p>
+  </footer>
+</body>
+</html>
